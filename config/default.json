@@ -1,3 +1,4 @@
 {
-    "mongoURI":"mongodb+srv://zakk123:zakk123@uw-dev-connect.fydbo.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+  "mongoURI": "mongodb+srv://zakk123:zakk123@uw-dev-connect.fydbo.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+  "jwtSecret": "superawesomesupersecret"
 }

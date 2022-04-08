@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-const { route } = require('../routes/api/auth');
 
 const ProfileSchema = new mongoose.Schema({
   user: {

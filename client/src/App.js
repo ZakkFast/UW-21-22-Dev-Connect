@@ -1,7 +1,7 @@
 import React, { Fragment, useEffect } from 'react';
 // Utils and Actions
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import {loadUser} from './actions/auth';
+import { loadUser } from './actions/auth';
 import setAuthToken from './utils/setAuthToken';
 // Components
 import Navbar from './components/layout/Navbar';
@@ -11,6 +11,7 @@ import Login from './components/auth/Login';
 import Alert from './components/layout/Alert';
 import Dashboard from './components/dashboard/Dashboard';
 import PrivateRoute from './components/routing/PrivateRoute';
+import ProfileForm from './components/profile-forms/CreateProfile'
 
 // Redux
 import { Provider } from 'react-redux';
@@ -25,7 +26,7 @@ if (localStorage.token) {
 const App = () => {
   useEffect(() => {
     store.dispatch(loadUser());
-  }, [])
+  }, []);
 
   return (
     <Provider store={store}>
@@ -38,9 +39,13 @@ const App = () => {
             <Route exact path="/register" element={<Register />} />
             <Route exact path="/login" element={<Login />} />
             <Route
-            path="dashboard"
-            element={<PrivateRoute component={Dashboard} />}
-          />
+              path="dashboard"
+              element={<PrivateRoute component={Dashboard} />}
+            />
+            <Route
+              path="create-profile"
+              element={<PrivateRoute component={ProfileForm} />}
+            />
           </Routes>
         </Fragment>
       </Router>

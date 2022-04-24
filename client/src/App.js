@@ -18,6 +18,7 @@ import Profiles from './components/profiles/Profiles';
 import Profile from './components/profile/Profile';
 import Posts from './components/posts/Posts';
 import Post from './components/post/Post';
+import PageNotFound from './components/layout/PageNotFound'
 
 // Redux
 import { Provider } from 'react-redux';
@@ -41,6 +42,7 @@ const App = () => {
           <Navbar />
           <Alert />
           <Routes>
+            <Route path='/*' element={<PageNotFound />} />
             <Route exact path="/" element={<Landing />} />
             <Route exact path="/register" element={<Register />} />
             <Route exact path="/login" element={<Login />} />

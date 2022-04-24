@@ -1,9 +1,9 @@
 import {
   GET_PROFILE,
-  GET_PROFILES,
   PROFILE_ERROR,
   CLEAR_PROFILE,
   UPDATE_PROFILE,
+  GET_PROFILES,
   GET_REPOS,
   NO_REPOS,
 } from '../actions/types';
@@ -45,7 +45,6 @@ function profileReducer(state = initialState, action) {
         ...state,
         profile: null,
         repos: [],
-        loading: false,
       };
     case GET_REPOS:
       return {

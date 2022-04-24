@@ -11,7 +11,7 @@ import Login from './components/auth/Login';
 import Alert from './components/layout/Alert';
 import Dashboard from './components/dashboard/Dashboard';
 import PrivateRoute from './components/routing/PrivateRoute';
-import ProfileForm from './components/profile-forms/CreateProfile'
+import ProfileForm from './components/profile-forms/ProfileForm';
 
 // Redux
 import { Provider } from 'react-redux';
@@ -44,6 +44,10 @@ const App = () => {
             />
             <Route
               path="create-profile"
+              element={<PrivateRoute component={ProfileForm} />}
+            />
+            <Route
+              path="edit-profile"
               element={<PrivateRoute component={ProfileForm} />}
             />
           </Routes>

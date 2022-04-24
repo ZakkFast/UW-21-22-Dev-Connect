@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { getCurrentProfile } from '../../actions/profile';
+// Components
+import DashboardActions from './DashboardActions';
 
 const Dashboard = ({
   getCurrentProfile,
@@ -21,10 +23,10 @@ const Dashboard = ({
       </p>
       {profile !== null ? (
         <>
-          {/* <DashboardActions />
-          <Experience experience={profile.experience} />
+          <DashboardActions />
+          {/* <Experience experience={profile.experience} />
           <Education education={profile.education} /> */}
-
+          <h1>has</h1>
           {/* <div className="my-2">
             <button className="btn btn-danger" onClick={() => deleteAccount()}>
               <i className="fas fa-user-minus" /> Delete My Account
@@ -51,7 +53,7 @@ Dashboard.propTypes = {
 
 const mapStateToProps = (state) => ({
   auth: state.auth,
-  profile: state.profile
+  profile: state.profile,
 });
 
 export default connect(mapStateToProps, { getCurrentProfile })(Dashboard);

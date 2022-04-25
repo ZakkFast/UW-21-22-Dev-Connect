@@ -1,7 +1,0 @@
-{
-    "mongoURI": "mongodb+srv://zakk123:TLYW6snHWjV9pZCq@uw-dev-connect.fydbo.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
-    "jwtSecret": "6UKSt9z7gy",
-    "githubClientId": "b4e96262050455f83fa50",
-    "githubSecret": "ee32d7b10949649a9a9eaac32911efea7dd05f3f"
-  }
-  
